@@ -1,0 +1,19 @@
+{
+  "name": "intervai-root",
+  "version": "1.0.0",
+  "description": "IntervAI — AI Mock Interview & Career Preparation Platform",
+  "main": "server/index.js",
+  "scripts": {
+    "install:all": "npm install && npm run install:server && npm run install:client",
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client --legacy-peer-deps",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start": "node server/index.js",
+    "build": "npm run build --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
